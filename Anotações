@@ -11,3 +11,7 @@ Rota
 Controller
 Serviço
 Modelo
+
+
+npm install
+npm start
