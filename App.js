@@ -1,9 +1,10 @@
 const express = require("express");
 const cors = require("cors");
-const CounterRoute = require("/routes/CounterRoute")
+const { json } = require("express");
+const CounterRoute = require("./routes/CounterRoute")
 const porta = process.env.PORT || 3000;
 
-var contador=0;
+var contador= 1;
 
 class App {
     static async init() {
