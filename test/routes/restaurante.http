@@ -1,0 +1,11 @@
+GET http://localhost:3000/restaurante
+
+###
+
+POST http://localhost:3000/restaurante HTTP/1.1
+content-type: application/json
+
+{
+    "nome": "lanchão",
+    "enderaço" : "Paranavaí-PR"
+}

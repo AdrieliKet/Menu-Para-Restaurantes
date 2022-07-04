@@ -1,10 +1,12 @@
 const express = require("express");
 const cors = require("cors");
 const { json } = require("express");
-const CounterRoute = require("./routes/CounterRoute")
+const UserRoute = require("./routes/UserRoute")
+const ProdutoRoute = require("./routes/ProdutoRoute")
+const RestauranteRoute = require("./routes/RestauranteRoute")
+const CategoriaRoute = require("./routes/CategoriaRoute")
 const porta = process.env.PORT || 3000;
 
-var contador= 1;
 
 class App {
     static async init() {
@@ -20,23 +22,14 @@ class App {
                 author: "Adrieli K. santos"
             })
         })
-        app.get("/ping", (req, res)=>{
-            res.json({"Reposta": "pong"})
-        })
-
-        app.get("/contador", (req, res)=>{
-            res.json({"Resposta": contador})
-        })
-
-        app.get("/incremento", (req, res)=>{
-            contador++;
-            res.json({"contador": contador})
-        })
 
         app.listen(porta, () => {
             console.log(`Servidor inicializado na porta: ${porta}`)
         })
-        new CounterRoute(app)
+        new UserRoute(app)
+        new ProdutoRoute(app)
+        new RestauranteRoute(app)
+        new CategoriaRoute(app)
     }
 }
 App.init();

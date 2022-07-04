@@ -1,0 +1,12 @@
+GET http://localhost:3000/produto
+
+###
+
+POST http://localhost:3000/produto HTTP/1.1
+content-type: application/json
+
+{
+    "nome": "x-tudo",
+    "ingredientes" : "pão, hamburguer, presunto, mussarela, alface, tomate, frango, calabres, bacon, milho, salcicha",
+    "preço": "25.00"
+}
