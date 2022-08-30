@@ -1,11 +1,45 @@
-var users = [];
-module.exports = class UserService {
-    static getUsers() {
-        return { users: users }
-    }
-    static save(user) {
-        users.push(user)
-        return { user: user }
-    }
+"use strict";
 
+const Mongoose = require("mongoose");
+const Usuario = Mongoose.model("Usuario");
+
+module.exports = class UserService {
+    static async buscarPorId(idUsuario) {
+        try {
+            return await Usuario.findById(idUsuario);
+        } catch (error) {
+            throw new Error('UserService.buscarPorId: ' + error);
+        }
+    } // buscarPorId()
+    static async buscarTodos() {
+        try {
+            return await Usuario.find({});
+        } catch (error) {
+            throw new Error('UserService.buscarTodos: ' + error);
+        }
+    } // buscarTodos()
+    static async criar(usuario) {
+        try {
+            return await Usuario.create(usuario)
+        } catch (error) {
+            throw new Error('UserService.criar: ' + error);
+        }
+    } // criar()
+    static async deletar(usuario) {
+        try {
+            if (!usuario._id)
+                throw new Error('A identificação do usuário deve ser informada.');
+
+            return await Usuario.findOneAndDelete({ _id: usuario._id });
+        } catch (error) {
+            throw new Error('UserService.deletar: ' + error);
+        }
+    } // deletar()
+    static async atualizar(usuario) {
+        try {
+            return await Usuario.findByIdAndUpdate(usuario._id, usuario);
+        } catch (error) {
+            throw new Error('UserService.atualizar: ' + error);
+        }
+    } // atualizar()
 }
