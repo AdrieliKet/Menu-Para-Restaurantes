@@ -1,11 +1,47 @@
 GET http://localhost:3000/restaurante
 
 ###
-
 POST http://localhost:3000/restaurante HTTP/1.1
 content-type: application/json
 
-{
+{  
     "nome": "lanchão",
-    "enderaço" : "Paranavaí-PR"
+    "cnpj": "000",
+    "telefone": "000",
+    "email": "teste@gmail.com",
+    "taxaEntrega": 7,
+    "cep": 87711748,
+    "uf": "PR",
+    "endereco": "Rua ...",
+    "bairro": "São jorge",
+    "cidade": "Paranavaí",
+    "categoria": "Sushi"
+}
+
+###
+PUT http://localhost:3000/restaurante HTTP/1.1
+content-type: application/json
+
+{
+    "_id": "631688ddda7482d126ff6040",
+    "nome": "lanchão",
+    "cnpj": "000",
+    "telefone": "000",
+    "email": "teste@gmail.com",
+    "taxaEntrega": 7,
+    "cep": 87711748,
+    "uf": "PR",
+    "endereco": "Rua ...",
+    "bairro": "São jorge",
+    "cidade": "Paranavaí",
+    "categoria": "Sushi",
+    "__v": 0
+}
+
+###
+DELETE  http://localhost:3000/restaurante HTTP/1.1
+content-type: application/json
+
+{
+    "_id": "631688ddda7482d126ff6040"
 }

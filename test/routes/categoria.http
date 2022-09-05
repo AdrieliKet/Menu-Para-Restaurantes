@@ -8,3 +8,21 @@ content-type: application/json
 {
     "nome": "lanches"
 }
+
+###
+PUT http://localhost:3000/categoria HTTP/1.1
+content-type: application/json
+
+{
+    "nome": "lanches",
+    "_id": "631689e2da7482d126ff604c",
+    "__v": 0
+}
+
+###
+DELETE  http://localhost:3000/categoria HTTP/1.1
+content-type: application/json
+
+{
+    "_id": "631689e2da7482d126ff604c"
+}

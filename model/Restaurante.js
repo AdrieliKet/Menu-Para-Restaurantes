@@ -2,7 +2,7 @@
 
 const Mongoose = require("mongoose");
 
-module.exports = class Estabelecimento extends Mongoose.Schema {
+module.exports = class Restaurante extends Mongoose.Schema {
     constructor() {
         super({
             nome: String,
@@ -20,6 +20,6 @@ module.exports = class Estabelecimento extends Mongoose.Schema {
             access_at: Date,
             update_at: Date
         });
-        Mongoose.model("Estabelecimento", this);
+        Mongoose.model("Restaurante", this);
     } // constructor()
 };

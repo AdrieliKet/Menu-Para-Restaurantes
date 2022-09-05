@@ -1,7 +1,7 @@
 
 "use strict";
 const UserService = require("../services/UserService")
-module.exports = class UserControll {
+module.exports = class UserControl {
     static async buscarPorId(req, res) {
         try {
             res.status(200).send(await UserService.buscarPorId(req.params.idUsuario));

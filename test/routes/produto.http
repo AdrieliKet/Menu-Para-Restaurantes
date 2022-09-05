@@ -8,5 +8,30 @@ content-type: application/json
 {
     "nome": "x-tudo",
     "ingredientes" : "pão, hamburguer, presunto, mussarela, alface, tomate, frango, calabres, bacon, milho, salcicha",
-    "preço": "25.00"
+    "categoria": "lanche",
+    "tamanho": "pão chinelão",
+    "preço": 25.00
+}
+
+
+###
+PUT http://localhost:3000/produto HTTP/1.1
+content-type: application/json
+
+{
+    "nome": "x-tudo",
+    "ingredientes" : "pão, hamburguer, presunto, mussarela, alface, tomate, frango, calabres, bacon, milho, salcicha",
+    "categoria": "lanche",
+    "tamanho": "pão chinelão",
+    "preço": 25.00,
+    "_id": "6316898cda7482d126ff6045",
+    "__v": 0
+}
+
+###
+DELETE  http://localhost:3000/produto HTTP/1.1
+content-type: application/json
+
+{
+    "_id": "6316898cda7482d126ff6045"
 }

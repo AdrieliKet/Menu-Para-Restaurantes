@@ -4,10 +4,6 @@ require("./config");
 const express = require("express");
 const cors = require("cors");
 const { json } = require("express");
-const UserRoute = require("./routes/UserRoute")
-const ProdutoRoute = require("./routes/ProdutoRoute")
-const RestauranteRoute = require("./routes/RestauranteRoute")
-const CategoriaRoute = require("./routes/CategoriaRoute")
 const FabricaConexao = require("./conection/FabricaConexao")
 const porta = process.env.PORT || 3000;
 
@@ -32,12 +28,29 @@ class App {
         // instanciando os modelos
         const Usuario = require("./model/Usuario");
         new Usuario();
+        const UserRoute = require("./routes/UserRoute")
 
+        const Produto = require("./model/Produto");
+        new Produto();
+        const ProdutoRoute = require("./routes/ProdutoRoute")
+
+        const Restaurante = require("./model/Restaurante");
+        new Restaurante();
+        const RestauranteRoute = require("./routes/RestauranteRoute")
+
+        const Categoria = require("./model/Categoria");
+        new Categoria();
+        const CategoriaRoute = require("./routes/CategoriaRoute")
+
+        const Cardapio = require("./model/Cardapio");
+        new Cardapio();
+        const CardapioRoute = require("./routes/CardapioRoute")
         //instanciando as rotas
         new UserRoute(app)
         new ProdutoRoute(app)
         new RestauranteRoute(app)
         new CategoriaRoute(app)
+        new CardapioRoute(app)
 
         // Rota básica da aplicação
         app.get("/", (req, res) => {
