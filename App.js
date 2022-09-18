@@ -28,7 +28,7 @@ class App {
         // instanciando os modelos
         const Usuario = require("./model/Usuario");
         new Usuario();
-        const UserRoute = require("./routes/UserRoute")
+        const UsuarioRoute = require("./routes/UsuarioRoute")
 
         const Produto = require("./model/Produto");
         new Produto();
@@ -46,7 +46,7 @@ class App {
         new Cardapio();
         const CardapioRoute = require("./routes/CardapioRoute")
         //instanciando as rotas
-        new UserRoute(app)
+        new UsuarioRoute(app)
         new ProdutoRoute(app)
         new RestauranteRoute(app)
         new CategoriaRoute(app)
