@@ -6,7 +6,7 @@ POST http://localhost:3000/produto HTTP/1.1
 content-type: application/json
 
 {
-    "nome": "x-tudo",
+    "nome": "mini-tudo",
     "ingredientes" : "pão, hamburguer, presunto, mussarela, alface, tomate, frango, calabres, bacon, milho, salcicha",
     "categoria": "lanche",
     "tamanho": "pão chinelão",
@@ -19,12 +19,12 @@ PUT http://localhost:3000/produto HTTP/1.1
 content-type: application/json
 
 {
-    "nome": "x-tudo",
+    "nome": "mini-tudo",
     "ingredientes" : "pão, hamburguer, presunto, mussarela, alface, tomate, frango, calabres, bacon, milho, salcicha",
     "categoria": "lanche",
     "tamanho": "pão chinelão",
-    "preço": 25.00,
-    "_id": "6316898cda7482d126ff6045",
+    "preço": 20.00,
+    "_id": "6327765c37615fdb2569272f",
     "__v": 0
 }
 
@@ -33,5 +33,5 @@ DELETE  http://localhost:3000/produto HTTP/1.1
 content-type: application/json
 
 {
-    "_id": "6316898cda7482d126ff6045"
+    "_id": "6327765c37615fdb2569272f"
 }

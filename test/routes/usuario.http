@@ -7,7 +7,7 @@ content-type: application/json
 
 {
     "nome": "Admin",
-    "sobrenome": "IFPR",
+    "sobrenome": "Principal",
     "email": "admin@admin.com",
     "senha": "password"
 }
@@ -17,8 +17,8 @@ PUT http://localhost:3000/usuario HTTP/1.1
 content-type: application/json
 
 {
-    "_id": "6303f93406a4c75edfacfb95",
-    "nome": "Admin Atualizado 2",
+    "_id": "6327754b37615fdb25692722",
+    "nome": "Admin 2",
     "email": "admin@admin.com",
     "senha": "password",
     "__v": 0
@@ -29,5 +29,5 @@ DELETE  http://localhost:3000/usuario HTTP/1.1
 content-type: application/json
 
 {
-    "_id": "6303f91306a4c75edfacfb93"
+    "_id": "63276e2d37615fdb25692717"
 }

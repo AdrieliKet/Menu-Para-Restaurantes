@@ -5,7 +5,7 @@ POST http://localhost:3000/restaurante HTTP/1.1
 content-type: application/json
 
 {  
-    "nome": "lanchão",
+    "nome": "cantina",
     "cnpj": "000",
     "telefone": "000",
     "email": "teste@gmail.com",
@@ -15,6 +15,7 @@ content-type: application/json
     "endereco": "Rua ...",
     "bairro": "São jorge",
     "cidade": "Paranavaí",
+    "cardapio": "promocional",
     "categoria": "Sushi"
 }
 
@@ -23,7 +24,7 @@ PUT http://localhost:3000/restaurante HTTP/1.1
 content-type: application/json
 
 {
-    "_id": "631688ddda7482d126ff6040",
+    "_id": "632775d137615fdb2569272a",
     "nome": "lanchão",
     "cnpj": "000",
     "telefone": "000",
@@ -34,7 +35,8 @@ content-type: application/json
     "endereco": "Rua ...",
     "bairro": "São jorge",
     "cidade": "Paranavaí",
-    "categoria": "Sushi",
+    "categoria": "pizza",
+    "cardapio": "promocional",
     "__v": 0
 }
 
@@ -43,5 +45,5 @@ DELETE  http://localhost:3000/restaurante HTTP/1.1
 content-type: application/json
 
 {
-    "_id": "631688ddda7482d126ff6040"
+    "_id": "63168adcda7482d126ff605b"
 }

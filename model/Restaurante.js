@@ -16,6 +16,7 @@ module.exports = class Restaurante extends Mongoose.Schema {
             bairro: String,
             cidade: String,
             categoria: String,
+            cardapio: String,
             create_at: Date,
             access_at: Date,
             update_at: Date

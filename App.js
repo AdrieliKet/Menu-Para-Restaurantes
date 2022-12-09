@@ -45,12 +45,18 @@ class App {
         const Cardapio = require("./model/Cardapio");
         new Cardapio();
         const CardapioRoute = require("./routes/CardapioRoute")
+
+        const ItemCardapio = require("./model/ItemCardapio");
+        new ItemCardapio();
+        const ItemCardapioRoute = require("./routes/ItemCardapioRoute")
+        
         //instanciando as rotas
         new UsuarioRoute(app)
         new ProdutoRoute(app)
         new RestauranteRoute(app)
         new CategoriaRoute(app)
         new CardapioRoute(app)
+        new ItemCardapioRoute(app)
 
         // Rota básica da aplicação
         app.get("/", (req, res) => {

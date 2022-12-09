@@ -1,0 +1,30 @@
+GET http://localhost:3000/itemCardapio
+
+###
+
+POST http://localhost:3000/itemCardapio HTTP/1.1
+content-type: application/json
+
+{
+    "idCardapio": "63168abbda7482d126ff6057",
+    "idProduto": "63168ae0da7482d126ff605d"
+}
+
+###
+PUT http://localhost:3000/itemCardapio HTTP/1.1
+content-type: application/json
+
+{
+    "idCardapio": "63168abbda7482d126ff6057",
+    "idProduto": "63168ae0da7482d126ff605d",
+    "_id": "6393b11bf91086c7f6bd777c",
+    "__v": 0
+}
+
+###
+DELETE  http://localhost:3000/itemCardapio HTTP/1.1
+content-type: application/json
+
+{
+    "_id": "6393b11bf91086c7f6bd777c"
+}

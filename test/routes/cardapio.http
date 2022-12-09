@@ -6,8 +6,7 @@ POST http://localhost:3000/cardapio HTTP/1.1
 content-type: application/json
 
 {
-    "nome": "Cardapio de lanches",
-    "produto": "x-tudo"
+    "nome": "Cardapio de sushi",
 }
 
 ###
@@ -15,9 +14,8 @@ PUT http://localhost:3000/cardapio HTTP/1.1
 content-type: application/json
 
 {
-    "nome": "Cardapio de lanches",
-    "produto": "x-tudo",
-    "_id": "63168a7fda7482d126ff6052",
+    "nome": "Cardapio de sushi",
+    "_id": "6327774437615fdb2569273b",
     "__v": 0
 }
 
@@ -26,5 +24,5 @@ DELETE  http://localhost:3000/cardapio HTTP/1.1
 content-type: application/json
 
 {
-    "_id": "63168a7fda7482d126ff6052"
+    "_id": "6327774437615fdb2569273b"
 }

@@ -2,14 +2,15 @@
 
 const Mongoose = require("mongoose");
 
-module.exports = class Cardapio extends Mongoose.Schema {
+module.exports = class ItemCardapio extends Mongoose.Schema {
     constructor() {
         super({
-            nome: String,
+            idCardapio: String,
+            idProduto: String,
             create_at: Date,
             access_at: Date,
             update_at: Date
         });
-        Mongoose.model("Cardapio", this);
+        Mongoose.model("ItemCardapio", this);
     } // constructor()
 };
